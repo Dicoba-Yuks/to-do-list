@@ -1,0 +1,99 @@
+/*mengatur font dasar, warna latar belakang*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex; /*untuk menempatkan wadah aplikasi tepat di tengah halaman secara horizontal dan vertikal*/
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/*Ini adalah wadah utama*/
+.todo-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*memberikan efek bayangan yang membuatnya terlihat lebih modern*/
+    width: 100%;
+    max-width: 400px; /*membatasi lebar agar tidak terlalu besar di layar yang lebar*/
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/*kotak input dan tombol "Add" berada dalam satu baris yang rapi*/
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/*mengatur tampilan kotak input, termasuk warna, padding, dan sudut yang membulat*/
+#todo-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/*mengatur tampilan tombol, termasuk warna, padding, dan sudut yang membulat*/
+#add-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*mengubah warna tombol saat kursor mouse diarahkan ke atasnya*/
+#add-button:hover {
+    background-color: #4cae4c;
+}
+
+/*Kita menghilangkan bullet point bawaan dari daftar karena kita akan membuat tampilan daftar tugas sendiri*/
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+/*Ini adalah styling untuk setiap item tugas di dalam daftar*/
+#todo-list li {
+    background-color: #e9e9e9;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+/*kelas CSS yang akan kita tambahkan dengan JavaScript, fungsinya adalah memberikan efek coret pada teks tugas yang sudah selesai*/
+.done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/*Styling untuk tombol hapus*/
+.delete-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/*Efek hover untuk tombol hapus*/
+.delete-button:hover {
+    background-color: #c9302c;
+}

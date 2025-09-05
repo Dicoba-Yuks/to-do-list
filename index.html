@@ -1,0 +1,60 @@
+<!-- Ini adalah deklarasi yang memberi tahu browser bahwa ini adalah dokumen HTML5 -->
+<!DOCTYPE html>
+
+<!-- Ini adalah elemen akar dari halaman HTML dan kita tetapkan bahasanya ke Inggris -->
+<html lang="en">
+
+<!--
+Bagian ini berisi metadata tentang halaman web, seperti judul, link ke file CSS,
+dan pengaturan viewport untuk tampilan di perangkat seluler
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Ini adalah judul yang akan muncul di tab browser -->
+    <title>Simple To-Do List</title>
+    
+    <!-- Ini adalah cara kita menghubungkan file HTML dengan file CSS yang akan kita buat nanti untuk mempercantik tampilan -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Di sinilah semua konten yang terlihat oleh pengguna berada -->
+<body>
+
+    <!-- Kita menggunakan div sebagai wadah utama untuk seluruh aplikasi -->
+    <div class="todo-container">
+        
+        <!-- Ini adalah judul utama aplikasi -->
+        <h2>To-Do List</h2>
+        
+        <!-- Wadah untuk tempat input tugas dan tombol -->
+        <div class="input-section">
+
+            <!-- 
+            Ini adalah kotak teks di mana pengguna akan mengetik tugas baru
+            ID ini sangat penting karena kita akan menggunakannya di JavaScript untuk mengambil nilai yang diketik pengguna
+            Teks yang muncul di dalam kotak sebelum pengguna mengetik
+            -->
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            
+            <!--
+            Ini adalah tombol "Add" yang akan kita gunakan untuk menambahkan tugas.
+            ID-nya juga penting untuk JavaScript
+            -->
+            <button id="add-button">Add</button>
+        </div>
+
+        <!-- Ini adalah daftar yang akan menjadi tempat kita menampilkan semua tugas -->
+        <ul id="todo-list">
+        </ul>
+    </div>
+    
+    <!--
+    Ini adalah baris kode yang menghubungkan file HTML dengan file JavaScript
+    yang akan kita buat nanti untuk membuat aplikasi berfungsi
+    -->
+    <script src="script.js"></script>
+
+</body>
+</html>
